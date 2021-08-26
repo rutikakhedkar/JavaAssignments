@@ -81,14 +81,6 @@ class Main
             pastry.display();
         }
 
-//
-//        for(Map.Entry entry:names1.entrySet())
-//        {
-//            p1.display();
-//        }
-
-
-
     }
 
 }
