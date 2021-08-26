@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class CalculateTax {
+    static  int i=0;
+    static  long tax;
+    static   long calculateTax(String names,long income)
+    {
+        if(income>=300000)
+            tax=income*(20/100);
+        else if(income>=100000)
+            tax=income*(10/100);
+        else if(income<=300000 && income<=100000)
+             tax=0;
+        return  tax;
+    }
+    public static void main(String[] args) {
+        System.out.println("Tax Calculator App\n");
+        System.out.println("----WELCOME----");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the total person count");
+        int n=sc.nextInt();
+        String []names=new String[n+1];
+        long []income=new long[n+1];
+        for(i=1;i<=n;i++)
+        {
+            System.out.println("Enter name "+i);
+            names[i]=sc.next();
+            System.out.println("Enter "+names[i]+"'s Annual income:");
+            income[i]=sc.nextLong();
+
+        }
+        System.out.println("Names with lible taxes\n");
+        System.out.println("-----------------------\n");
+        for(i=1;i<=n;i++)
+        {
+            System.out.println(names[i]+": ₹  "+calculateTax(names[n],income[n]));
+        }
+
+    }
+
+}
