@@ -1,9 +1,7 @@
 package com.cakeshop.javaapp;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Cake {
     String name;
@@ -60,8 +58,7 @@ class Main
 
         for (Cake cake:cakes)
         {
-            c1.display();
-            c2.display();
+            cake.display();
         }
 
         Pastry p1=new Pastry();
@@ -81,8 +78,7 @@ class Main
 
         for(Pastry pastry:pastries)
         {
-            p1.display();
-            p2.display();
+            pastry.display();
         }
 
 //
